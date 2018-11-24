@@ -8,7 +8,7 @@ mode_var_list : (mode_var_decl)+ ;
 
 mode_var_decl : var_type WHITESPACE mode_var_id (WHITESPACE var_range)? NEWLINE ;
 
-mode_var_id : ID_LOWERCASE ;
+mode_var_id : ID_UPPERCASE ;
 
 var_type : (BOOL | INT | REAL) ;
 
@@ -16,7 +16,7 @@ system_var_list : (system_var_decl)+ ;
 
 system_var_decl : system_var_id  WHITESPACE var_range NEWLINE ;
 
-system_var_id : ID_UPPERCASE ;
+system_var_id : ID_LOWERCASE ;
 
 var_range : (LBRCKT var_value RBRCKT  | LBRCKT var_value COMMA WHITESPACE var_value RBRCKT) ;
 

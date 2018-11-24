@@ -3,3 +3,4 @@
 wReachLexer.py
 wReachListener.py
 wReachParser.py
+__pycache__

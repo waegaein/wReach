@@ -1,0 +1,34 @@
+{
+	{ mode_var_list: [
+		{ mode_var_decl: 			{ var_type: 			}
+			{ mode_var_id: 			}
+		}
+		{ mode_var_decl: 			{ var_type: 			}
+			{ mode_var_id: 			}
+			{ var_range: 			{ var_value: 			}
+			}
+		}
+		{ mode_var_decl: 			{ var_type: 			}
+			{ mode_var_id: 			}
+			{ var_range: 			{ var_value: 			}
+			{ var_value: 			}
+			}
+		}
+	] }
+	{ system_var_list: [
+		{ system_var_decl: 			{ system_var_id: 			}
+			{ var_range: 			{ var_value: 			}
+			}
+		}
+		{ system_var_decl: 			{ system_var_id: 			}
+			{ var_range: 			{ var_value: 			}
+			{ var_value: 			}
+			}
+		}
+	] }
+	{ mode_list: [
+		{ mode_decl: 			{ mode_condition: 			}
+			{ invt: 			}
+		}
+	] }
+}

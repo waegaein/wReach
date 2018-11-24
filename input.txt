@@ -1,0 +1,13 @@
+Bool A
+Int B [5]
+Real C [1.5, 2.5]
+
+x [3.14]
+y [0, 10]
+
+{
+mode A < 10
+invt:
+ x == 5
+ y < 10
+

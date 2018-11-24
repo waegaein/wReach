@@ -14,7 +14,7 @@ var_type : (BOOL | INT | REAL) ;
 
 system_var_list : (system_var_decl)+ ;
 
-system_var_decl : system_var_id  WHITESPACE var_range NEWLINE ;
+system_var_decl : system_var_id WHITESPACE var_range NEWLINE ;
 
 system_var_id : ID_LOWERCASE ;
 
@@ -26,7 +26,7 @@ mode_list : (mode_decl)+ ;
 
 mode_decl : LCURLY NEWLINE mode_condition invt RCURLY NEWLINE ;
 
-mode_condition : mode_var_id WHITESPACE cmp WHITESPACE var_value NEWLINE ;
+mode_condition : MODE mode_var_id WHITESPACE cmp WHITESPACE var_value NEWLINE ;
 
 cmp : (CMP_GT | CMP_GTE | CMP_LT | CMP_LTE | CMP_EQ | CMP_NEQ) ;
 

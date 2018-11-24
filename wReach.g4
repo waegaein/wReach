@@ -4,19 +4,21 @@ grammar wReach;
  * Parser Rules
  */
 
+wReach : mode_var_list system_var_list mode_list EOF ;
+
 mode_var_list : (mode_var_decl)+ ;
 
 mode_var_decl : var_type WHITESPACE mode_var_id (WHITESPACE var_range)? NEWLINE ;
 
 mode_var_id : ID_UPPERCASE ;
 
-var_type : (BOOL | INT | REAL) ;
-
 system_var_list : (system_var_decl)+ ;
 
 system_var_decl : system_var_id WHITESPACE var_range NEWLINE ;
 
 system_var_id : ID_LOWERCASE ;
+
+var_type : (BOOL | INT | REAL) ;
 
 var_range : (LBRCKT var_value RBRCKT  | LBRCKT var_value COMMA WHITESPACE var_value RBRCKT) ;
 
@@ -26,7 +28,7 @@ mode_list : (mode_decl)+ ;
 
 mode_decl : LCURLY NEWLINE mode_condition invt RCURLY NEWLINE ;
 
-mode_condition : MODE mode_var_id WHITESPACE cmp WHITESPACE var_value NEWLINE ;
+mode_condition : MODE WHITESPACE mode_var_id WHITESPACE cmp WHITESPACE var_value NEWLINE ;
 
 cmp : (CMP_GT | CMP_GTE | CMP_LT | CMP_LTE | CMP_EQ | CMP_NEQ) ;
 

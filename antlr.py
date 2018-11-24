@@ -5,12 +5,11 @@ from wReachParser import wReachParser
 from JsonwReachListener import JsonwReachListener
 
 def main(argv):
-    print('mainfunc')
     input = FileStream(argv[1])
     lexer = wReachLexer(input)
     stream = CommonTokenStream(lexer)
     parser = wReachParser(stream)
-    tree = parser.chat()
+    tree = parser.wReach()
 
     output = open("output.json","w")
     

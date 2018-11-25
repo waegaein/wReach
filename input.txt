@@ -6,8 +6,8 @@ x [3.14]
 y [0, 10]
 
 {
-mode A < 10
-invt:
+Mode A < 10
+Invt:
  x == 5
  y < 10
-
+}

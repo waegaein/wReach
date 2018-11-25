@@ -78,9 +78,9 @@ BOOL : 'Bool' ;
 INT : 'Int' ;
 REAL : 'Real' ;
 
-MODE : 'mode' ;
-INVT : 'invt' ;
-FLOW : 'flow' ;
-JUMP : 'jump' ;
-INIT : 'init' ;
-GOAL : 'goal' ;
+MODE : 'Mode' ;
+INVT : 'Invt' ;
+FLOW : 'Flow' ;
+JUMP : 'Jump' ;
+INIT : 'Init' ;
+GOAL : 'Goal' ;

@@ -27,15 +27,6 @@ class JsonwReachListener(wReachListener) :
         self.output.write('}}')
 
 
-    # Enter a parse tree produced by wReachParser#mode_var_id.
-    def enterMode_var_id(self, ctx:wReachParser.Mode_var_idContext):
-        self.output.write('"mode_var_id": ' + '"' + ctx.ID_UPPERCASE().getText() + '"')
-
-    # Exit a parse tree produced by wReachParser#mode_var_id.
-    def exitMode_var_id(self, ctx:wReachParser.Mode_var_idContext):
-        self.output.write('')
-
-
     # Enter a parse tree produced by wReachParser#system_var_list.
     def enterSystem_var_list(self, ctx:wReachParser.System_var_listContext):
         self.output.write('"system_var_list": [')        
@@ -54,15 +45,6 @@ class JsonwReachListener(wReachListener) :
         self.output.write('}}')
 
 
-    # Enter a parse tree produced by wReachParser#system_var_id.
-    def enterSystem_var_id(self, ctx:wReachParser.System_var_idContext):
-        self.output.write('"system_var_id": ' + '"' + ctx.ID_LOWERCASE().getText() + '"')
-
-    # Exit a parse tree produced by wReachParser#system_var_id.
-    def exitSystem_var_id(self, ctx:wReachParser.System_var_idContext):
-        self.output.write('')
-
-
     # Enter a parse tree produced by wReachParser#var_type.
     def enterVar_type(self, ctx:wReachParser.Var_typeContext):
         self.output.write('"var_type": "TYPE"')
@@ -79,15 +61,6 @@ class JsonwReachListener(wReachListener) :
     # Exit a parse tree produced by wReachParser#var_range.
     def exitVar_range(self, ctx:wReachParser.Var_rangeContext):
         self.output.write(']')
-
-
-    # Enter a parse tree produced by wReachParser#var_value.
-    def enterVar_value(self, ctx:wReachParser.Var_valueContext):
-        self.output.write('{"var_value": "VALUE"')
-
-    # Exit a parse tree produced by wReachParser#var_value.
-    def exitVar_value(self, ctx:wReachParser.Var_valueContext):
-        self.output.write('}')
 
 
     # Enter a parse tree produced by wReachParser#mode_list.

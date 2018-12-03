@@ -1,28 +1,35 @@
-bool A
-int B [5]
-real C [1.5, 2.5]
+bool a
+int b [5]
+real c [1.5, 2.5]
 
-x [3.14]
-y [0, 10]
+x [0, 15]
+g [9.8]
+v [-18, 18]
+t [0, 3]
 
 {
-mode A < 10
+mode b < 10
 	invt:
-		x == 5
-		y < 1
+		v <= 0
+		(x <= 0)
 	flow:
-		x = y + 2
-		y = 3
+		(d[x]/d[t] = v)
+		d[v]/d[t] = -g + D * v^2
+		x = y + 5
 	jump:
-		x' = 5
+		a == False
+		==> a = True and v' = -K * v
 		y' = 5
-mode B == True
+mode a == True
 	invt:
 		x >= 5
 	flow:
-		x = sin(y)
+		(x = sin(y) * 2)
 	jump:
-		x' = 1
+		b < 0
+		==> b = 5 and (x' = x) (v' = v)
 }
 init:
+	b = 1 and x >= 5 v == 0
 goal:
+	a == True and x >= 0.45

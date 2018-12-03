@@ -31,7 +31,15 @@ fragment FALSE : 'False' ;
 fragment VAL_NUMBER : DIGIT+ (DOT DIGIT+)? ;
 fragment VAL_BOOL : (TRUE | FALSE) ;
 
-VALUE : (VAL_NUMBER | VAL_BOOL) ;
+OP_EQUAL : '=' ;
+OP_PLUS : '+' ;
+OP_MINUS : '-' ;
+OP_MULTI : '*' ;
+OP_POWER : '^' ;
+OP_DIVIDE : '/' ;
+OP_MODULO : '%' ;
+
+VALUE : ((OP_PLUS | OP_MINUS)? VAL_NUMBER | VAL_BOOL) ;
 
 BOOL : 'bool' ;
 INT : 'int' ;
@@ -44,6 +52,17 @@ JUMP : 'jump' ;
 INIT : 'init' ;
 GOAL : 'goal' ;
 
+LPAREN : '(' ;
+RPAREN : ')' ;
+LCURLY : '{' ;
+RCURLY : '}' ;
+LBRCKT : '[' ;
+RBRCKT : ']' ;
+
+DIFF : 'd' ;
+ARROW : '==>' ;
+AND : 'and' ;
+
 fragment LOWERCASE : [a-z] ;
 fragment UPPERCASE : [A-Z] ;
 
@@ -54,21 +73,6 @@ COLON : ':' ;
 PRIME : '\'';
 
 VAR_ID : (LOWERCASE | UPPERCASE | UNDER)(LOWERCASE | UPPERCASE | UNDER | DIGIT)* ;
-
-OP_EQUAL : '=' ;
-OP_PLUS : '+' ;
-OP_MINUS : '-' ;
-OP_MULTI : '*' ;
-OP_POWER : '^' ;
-OP_DIVIDE : '/' ;
-OP_MODULO : '%' ;
-
-LPAREN : '(' ;
-RPAREN : ')' ;
-LCURLY : '{' ;
-RCURLY : '}' ;
-LBRCKT : '[' ;
-RBRCKT : ']' ;
 
 BLANK : (' ' | '\t' | '\n')+ -> skip;
 
@@ -97,26 +101,20 @@ mode_condition : MODE condition ;
 
 invt : INVT COLON invt_list ;
 
-invt_list : (invt_decl)+ ;
-
-invt_decl : condition ;
+invt_list : (condition)+ ;
 
 flow : FLOW COLON flow_list ;
 
-flow_list : (flow_decl)+ ;
+flow_list : (equation)+ ;
 
-flow_decl : equation ;
+jump : JUMP COLON jump_condition ARROW (equation)+ AND (equation)+ ;
 
-jump : JUMP COLON jump_list ;
-
-jump_list : (jump_decl)+ ;
-
-jump_decl : equation ;
+jump_condition : (LPAREN)? (condition)+ (RPAREN)? ;
 
 
-init : INIT COLON ;
+init : INIT COLON (equation)+ AND (condition)+ ;
 
-goal : GOAL COLON ;
+goal : GOAL COLON (condition)+ AND (condition)+ ;
 
 
 var_type : (BOOL | INT | REAL) ;
@@ -124,9 +122,9 @@ var_type : (BOOL | INT | REAL) ;
 var_range : (LBRCKT VALUE RBRCKT | LBRCKT VALUE COMMA VALUE RBRCKT) ;
 
 
-condition : VAR_ID COMPARATOR expression ;
+condition : (LPAREN)? VAR_ID COMPARATOR expression (RPAREN)? ;
 
-equation : VAR_ID (PRIME)? OP_EQUAL expression ;
+equation : (LPAREN)? (VAR_ID (PRIME)? | differential) OP_EQUAL expression (RPAREN)? ;
 
 
 expression : expression_multi ((OP_PLUS | OP_MINUS) expression_multi)* ;
@@ -140,3 +138,6 @@ atom_sign : (OP_PLUS atom_sign | OP_MINUS atom_sign | atom_function | atom) ;
 atom : (VALUE | VAR_ID) ;
 
 atom_function : FUNCTION LPAREN expression (COMMA expression)* RPAREN ;
+
+
+differential : DIFF LBRCKT VAR_ID RBRCKT OP_DIVIDE DIFF LBRCKT VAR_ID RBRCKT ;

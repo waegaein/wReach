@@ -1,3 +1,4 @@
+*.swp
 *.interp
 *.tokens
 wReachLexer.py

@@ -1,13 +1,28 @@
-Bool A
-Int B [5]
-Real C [1.5, 2.5]
+bool A
+int B [5]
+real C [1.5, 2.5]
 
 x [3.14]
 y [0, 10]
 
 {
-Mode A < 10
-Invt:
- x == 5
- y < 10
+mode A < 10
+	invt:
+		x == 5
+		y < 1
+	flow:
+		x = y + 2
+		y = 3
+	jump:
+		x' = 5
+		y' = 5
+mode B == True
+	invt:
+		x >= 5
+	flow:
+		x = sin(y)
+	jump:
+		x' = 1
 }
+init:
+goal:

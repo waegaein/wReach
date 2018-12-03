@@ -1,0 +1,291 @@
+# Generated from wReach.g4 by ANTLR 4.7.1
+from antlr4 import *
+if __name__ is not None and "." in __name__:
+    from .wReachParser import wReachParser
+else:
+    from wReachParser import wReachParser
+
+# This class defines a complete listener for a parse tree produced by wReachParser.
+class wReachListener(ParseTreeListener):
+    def __init__(self, output):
+        pass
+
+    # Enter a parse tree produced by wReachParser#wReach.
+    def enterWReach(self, ctx:wReachParser.WReachContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#wReach.
+    def exitWReach(self, ctx:wReachParser.WReachContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#mode_var_list.
+    def enterMode_var_list(self, ctx:wReachParser.Mode_var_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#mode_var_list.
+    def exitMode_var_list(self, ctx:wReachParser.Mode_var_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#mode_var_decl.
+    def enterMode_var_decl(self, ctx:wReachParser.Mode_var_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#mode_var_decl.
+    def exitMode_var_decl(self, ctx:wReachParser.Mode_var_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#system_var_list.
+    def enterSystem_var_list(self, ctx:wReachParser.System_var_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#system_var_list.
+    def exitSystem_var_list(self, ctx:wReachParser.System_var_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#system_var_decl.
+    def enterSystem_var_decl(self, ctx:wReachParser.System_var_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#system_var_decl.
+    def exitSystem_var_decl(self, ctx:wReachParser.System_var_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#mode_list.
+    def enterMode_list(self, ctx:wReachParser.Mode_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#mode_list.
+    def exitMode_list(self, ctx:wReachParser.Mode_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#mode_decl.
+    def enterMode_decl(self, ctx:wReachParser.Mode_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#mode_decl.
+    def exitMode_decl(self, ctx:wReachParser.Mode_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#mode_condition.
+    def enterMode_condition(self, ctx:wReachParser.Mode_conditionContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#mode_condition.
+    def exitMode_condition(self, ctx:wReachParser.Mode_conditionContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#invt.
+    def enterInvt(self, ctx:wReachParser.InvtContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#invt.
+    def exitInvt(self, ctx:wReachParser.InvtContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#invt_list.
+    def enterInvt_list(self, ctx:wReachParser.Invt_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#invt_list.
+    def exitInvt_list(self, ctx:wReachParser.Invt_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#invt_decl.
+    def enterInvt_decl(self, ctx:wReachParser.Invt_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#invt_decl.
+    def exitInvt_decl(self, ctx:wReachParser.Invt_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#flow.
+    def enterFlow(self, ctx:wReachParser.FlowContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#flow.
+    def exitFlow(self, ctx:wReachParser.FlowContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#flow_list.
+    def enterFlow_list(self, ctx:wReachParser.Flow_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#flow_list.
+    def exitFlow_list(self, ctx:wReachParser.Flow_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#flow_decl.
+    def enterFlow_decl(self, ctx:wReachParser.Flow_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#flow_decl.
+    def exitFlow_decl(self, ctx:wReachParser.Flow_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#jump.
+    def enterJump(self, ctx:wReachParser.JumpContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#jump.
+    def exitJump(self, ctx:wReachParser.JumpContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#jump_list.
+    def enterJump_list(self, ctx:wReachParser.Jump_listContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#jump_list.
+    def exitJump_list(self, ctx:wReachParser.Jump_listContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#jump_decl.
+    def enterJump_decl(self, ctx:wReachParser.Jump_declContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#jump_decl.
+    def exitJump_decl(self, ctx:wReachParser.Jump_declContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#init.
+    def enterInit(self, ctx:wReachParser.InitContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#init.
+    def exitInit(self, ctx:wReachParser.InitContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#goal.
+    def enterGoal(self, ctx:wReachParser.GoalContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#goal.
+    def exitGoal(self, ctx:wReachParser.GoalContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#var_type.
+    def enterVar_type(self, ctx:wReachParser.Var_typeContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#var_type.
+    def exitVar_type(self, ctx:wReachParser.Var_typeContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#var_range.
+    def enterVar_range(self, ctx:wReachParser.Var_rangeContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#var_range.
+    def exitVar_range(self, ctx:wReachParser.Var_rangeContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#condition.
+    def enterCondition(self, ctx:wReachParser.ConditionContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#condition.
+    def exitCondition(self, ctx:wReachParser.ConditionContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#assignment.
+    def enterAssignment(self, ctx:wReachParser.AssignmentContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#assignment.
+    def exitAssignment(self, ctx:wReachParser.AssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#expression.
+    def enterExpression(self, ctx:wReachParser.ExpressionContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#expression.
+    def exitExpression(self, ctx:wReachParser.ExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#expression_multi.
+    def enterExpression_multi(self, ctx:wReachParser.Expression_multiContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#expression_multi.
+    def exitExpression_multi(self, ctx:wReachParser.Expression_multiContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#expression_power.
+    def enterExpression_power(self, ctx:wReachParser.Expression_powerContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#expression_power.
+    def exitExpression_power(self, ctx:wReachParser.Expression_powerContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#atom_sign.
+    def enterAtom_sign(self, ctx:wReachParser.Atom_signContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#atom_sign.
+    def exitAtom_sign(self, ctx:wReachParser.Atom_signContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#atom.
+    def enterAtom(self, ctx:wReachParser.AtomContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#atom.
+    def exitAtom(self, ctx:wReachParser.AtomContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#atom_function.
+    def enterAtom_function(self, ctx:wReachParser.Atom_functionContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#atom_function.
+    def exitAtom_function(self, ctx:wReachParser.Atom_functionContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#value.
+    def enterValue(self, ctx:wReachParser.ValueContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#value.
+    def exitValue(self, ctx:wReachParser.ValueContext):
+        pass
+
+
+    # Enter a parse tree produced by wReachParser#comparator.
+    def enterComparator(self, ctx:wReachParser.ComparatorContext):
+        pass
+
+    # Exit a parse tree produced by wReachParser#comparator.
+    def exitComparator(self, ctx:wReachParser.ComparatorContext):
+        pass
+
+

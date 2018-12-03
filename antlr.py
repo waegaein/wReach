@@ -2,7 +2,8 @@ import sys
 from antlr4 import *
 from wReachLexer import wReachLexer
 from wReachParser import wReachParser
-from JsonwReachListener import JsonwReachListener
+from wReachListener import wReachListener
+#from JsonwReachListener import JsonwReachListener
 
 def main(argv):
     input = FileStream(argv[1])
@@ -13,7 +14,8 @@ def main(argv):
 
     output = open("output.json","w")
     
-    jsonwReach = JsonwReachListener(output)
+#    jsonwReach = JsonwReachListener(output)
+    jsonwReach = wReachListener(output)
     walker = ParseTreeWalker()
     walker.walk(jsonwReach, tree)
     output.close()      

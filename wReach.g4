@@ -95,7 +95,7 @@ system_var_decl : VAR_ID var_range ;
 
 mode_list : LCURLY (mode_decl)+ RCURLY ;
 
-mode_decl : mode_condition invt flow jump ;
+mode_decl : mode_condition (invt)? (flow)? (jump)? ;
 
 mode_condition : MODE condition ;
 

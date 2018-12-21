@@ -1,14 +1,14 @@
-bool a
-int b [5]
-real c [1.5, 2.5]
-
-x [0, 15]
-g [9.8]
-v [-18, 18]
-t [0, 3]
+bool a;
+x [0, 15];
+g [9.8];
+int b;
+real c;
+v [-18, 18];
+t [0, 3];
 
 {
-mode b < 10
+	mode:
+		b < 10
 	invt:
 		v <= 0
 		(x <= 0)
@@ -20,7 +20,10 @@ mode b < 10
 		a == False
 		==> a = True and v' = -K * v
 		y' = 5
-mode a == True
+}
+{
+	mode:
+		a == True
 	invt:
 		x >= 5
 	flow:

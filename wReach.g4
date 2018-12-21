@@ -70,6 +70,7 @@ DOT : '.' ;
 COMMA : ',' ;
 UNDER : '_' ;
 COLON : ':' ;
+SEMICOLON : ';' ;
 PRIME : '\'';
 
 VAR_ID : (LOWERCASE | UPPERCASE | UNDER)(LOWERCASE | UPPERCASE | UNDER | DIGIT)* ;
@@ -80,24 +81,21 @@ BLANK : (' ' | '\t' | '\n')+ -> skip;
  * Parser Rules
  */
 
-wReach : mode_var_list system_var_list mode_list init goal EOF ;
+wReach : var_list mode_list init goal EOF ;
 
 
-mode_var_list : (mode_var_decl)+ ;
+var_list : (mode_var_decl | system_var_decl)+ ;
 
-mode_var_decl : var_type VAR_ID (var_range)? ;
+mode_var_decl : var_type VAR_ID SEMICOLON ;
 
-
-system_var_list : (system_var_decl)+ ;
-
-system_var_decl : VAR_ID var_range ;
+system_var_decl : VAR_ID var_range SEMICOLON ;
 
 
-mode_list : LCURLY (mode_decl)+ RCURLY ;
+mode_list : (mode_decl)+ ;
 
-mode_decl : mode_condition (invt)? (flow)? (jump)? ;
+mode_decl : LCURLY mode_condition (invt)? (flow)? (jump)? RCURLY ;
 
-mode_condition : MODE condition ;
+mode_condition : MODE COLON condition ;
 
 invt : INVT COLON invt_list ;
 
